@@ -1,0 +1,250 @@
+================================
+01 - Introduction
+================================
+1. 001 Course Outline
+--------------------------------
+- Hacking Lab 
+- Python 101
+- Reconnaissance ( information gathering ) who, un, scrapper
+- Scanning ( nmap, port mapped, OS,) 
+- vulnerability analysis
+- Exploitation & Gaining Access.
+- Port Exploitation 
+- Website Pen Testing (Penetration)
+- Man in the Middle attack 
+- Wireless cracking. 
+
+----------------------------------
+01-002 Join Our Online Classroom!
+----------------------------------
+- Accountability 
+- Support System
+- Valuable - Hard to acquire 
+
+-Online Class Room 
+	- Introduce yourself to the community
+	- Accountability - Buddies Channel
+	- Hang out in the # general Chat 
+-----------------------------------
+01-003 Exercise Meet Your Classmates & Instructor .html
+-----------------------------------
+https://discord.com/channels/423464391791476747/625730071256104973
+------------------------------
+01-004 What Is Ethical Hacking
+------------------------------
+Theory and Practice : 
+
+What does an ethical hacer do ?
+Can we get in trouble doing this ?
+
+- find vulnerability in the system for its improvement to secure them. We are Cyber Police
+	-- WHITE HAT HACKER 
+- System
+	- Network of computers. 
+	- Just a Single system.
+	- Company Server 
+	- A website. 
+- Vulnerability 
+
+BLACK HAT HACKER : 
+	find vulenrability, do malicious activity. 
+	- stealing, online money, install virus, 
+	- track your identiy, 
+
+Both use similar tools, must have permission to target a system. 
+
+ - White Hat hacker 
+	- Company : 
+	- make sure company is safe. 
+
+ - How am i going to practice?
+	- We simulate with Home devices.
+	- Virtual Machines. 
+	- 
+Fishing : Act of Ethcial hacking, getting into someones system. un and pass, 
+
+Two Twitter pages : ( original or duplicate/FAKE)
+  1. random ip address not an twitter name 
+  2. https://twitter.com (Original) 
+
+Phishing Website generally do not have https: 
+
+---------------------------------------
+01-005 Course Resources + Guide .html
+--------------------------------------
+01-005 zerotomastery.io-Complete-Ethical-Hacking-Bootcamp-Zero-to-Mastery-Guide (.pdf)
+--------------------------------------
+01-006 ZTM-Youtube
+---------------------------------------
+01-006 zerotomastery.io
+----------------------------------------
+01-006 LinkedIn-Group
+----------------------------------------
+
+
+==============================================
+02 - Setting Up Our Hacking Lab
+==============================================
+02-001 What is A Virtual Machine
+-----------------------------------------------
+- Windows OS, MacOS, Linux 
+- How to run More than One OS on a single system.
+	 - Hardware 
+	 - Software / OS 
+	 
+- benefits of VM
+	- in a safe environment 
+	- No effect on Physical machine. 
+	- Snapshot - save the current state of VM 
+
+Operating system : 
+Virtualization Software : 
+
+------------------------------------------------
+02-002 Why Linux
+-------------------------------------------------
+better than Other os ; 
+	- Open Source 
+	- Many Server run on linux 
+	- Free of Cost (ubuntu, debian)
+	- Good for Developing 
+	- Different Distros (penetration testing)
+   - Kali Linux 
+   	- Has different tools for hacking. 
+
+---------------------------------------------------
+02-003 Monthly Coding Challenges, Free Resources and Guides .html
+-------------------------------------------------------
+02-004 Downloading Virtual Box & Kali Linux
+-------------------------------------------------------
+Oracle VM Virtual BOX. 
+	- google ( virtual box) 
+Kali lINux : 
+	- kali linux (google)
+	- Penetration Testing Distribution 
+	- Debian Based  (download)
+		- Installer images 2022.3  (64 bit)
+	- old.kali.org ( if you need older versions)
+
+-------------------------------------------------
+02-005 Note Kali Linux Updates All The Time! .html
+--------------------------------------------------
+02- 006 Creating Our First Virtual Machine
+-------------------------------------------------
+- Install Oracle VM Box
+- NEW 	> Name (Kali Linux) , Machine Folder, Type (Linux), Version ( Debian -64 bit)  >>
+		
+	> Memory Size : 8GB
+	> Hard disk : Create a Virtual Hard disk now 
+		> VDI
+		> Dynamically allocated 
+		> Hard Disk Location : >20GB prefer 30GB
+		> Create 
+ - Select VM 
+	>> Settings  
+	   > Storage 
+		 > Controller IDE (Empty - RC > Remove)
+	         > Controller (Disk Shape ) Click 
+		    > Select Iso iamge (add) iso downloaded
+
+-------------------------------------------------------
+02-007 Installing Kali Linux Operating System
+-------------------------------------------------------
+Oracle VM box : 
+	Select the VM  >> Start 
+	    >> Graphical Install 
+	    >> Select Language : English 
+	    >> Select Your Location : India 
+	    >> Configure the Keyboar : American English
+	    >> insatller components ...
+	        
+	>> Configure the Network : Host Name : kali
+  			>> domain name : empty
+	>> Set up users and passwords 
+		>> root a/c,  (hacker)
+		>> set password (h@a#c$ker), re-enter 
+		>> Configure the Clock : Pacific
+		>> Partition disk 
+	            - 1st one > Guided - use entire disk
+		    - partition disk 
+		    - 1st option > All files in one partition
+		    - finish partitioning 
+	  	    - Write Changes to disk 
+ 	>> Configure the package manager (keep blank)
+	>> Software selection  ( default + large )
+		- desktop , xfce
+	>> Install  GRUB boot Loader : yes ( its only VM to don't worry ), /dev/sda (select)
+	>>  un : hacker pass : h@a#c$ker
+
+---------------------------------------------------------
+02-008 Update 1 - New & Old Versions of Kali Linux
+--------------------------------------------------
+ Blue and Purple teams 
+	- Offensive and defensive teams 
+	-Visit the kali linux website for official updates
+---------------------------------------------------
+02- 009 Networking Basics (.html) + PDF 
+----------------------------------------------------
+02-010 Full Screen Mode & Network Settings
+----------------------------------------------------
+Check 1 : Full Screen Mode : 
+  - Minimize and then maximize 
+  - Run Guest Editions : Install 
+  >>> Devices > Insert Guest Editions Additional CD Images
+	 ( a Disk icon appears on the desktop) 
+  	>> Double Click ( path )
+		/media/cdrom0
+>> Desktop> Terminal > cd /media/cdrom0/
+    > ls
+    > execute the file :  sh VBoxLinuxAdditions.run (Fail)
+    > sudo sh VBoxLinuxAdditions.run
+	password: h@a#c$ker	- Yes
+	>>>>> Restart the system <<<<<<<<<<<<<
+  > terminal : sudo reboot 
+
+Check 2 : Internet connection : 
+  Terminal : ping www.google.com 
+  		> Ctrl +c 
+  
+NAT : Network Address Translation : given by Virtual Box 
+ > sudo ifconfig  ( password)
+	IP Address : 10.0.2.15 - given by VB ( not valid )
+    ----------         ---------------- ------------------ 
+
+ - We need from Wifi 
+	- does not belong to 
+	- check ip of windows machines : ipconfig 
+
+Network setting of VM from NAT to Bridge Adapter 
+	- Realtek PCIi  (either wireless or wired (if cable connected, enable cable connector )
+
+	- terminal : sudo ifconfig 
+		- 192.168.x.x.
+----------------------------------------------------------
+02-011 Troubleshooting Network Connection in Kali Linux
+----------------------------------------------------------
+select VM > Kali VM >
+	- Bridged adapter selected 
+ >terminal > sudo ifconfig 
+		> eth0 : ipv4 :should be of IPV4 wifi range 
+	> ping www.google.com
+>>>>>>SUCCESS <<<<<<<<<<<<<<<<<<
+
+
+if bridge adapter causing any problems : 
+ - need to change our network settings : 
+	>VM > Setting > 
+	  choose : NAT Network >
+
+ to have separate network to connect to VMs under the NAT Network : 
+
+>Create NAT Netowrk 
+   > VM > Tools > Preferences > Networks > + 
+   +++ choose + to add a new network 
+
+VM > Settings  > choose NAT network (OK)
+  - reboot the machine
+
+VM > Kali linux > terminal > sudo ifconfig from the NAT network
+ >> ping www.google.com 
+
