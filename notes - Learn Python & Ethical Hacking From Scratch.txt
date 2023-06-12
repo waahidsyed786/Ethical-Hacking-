@@ -1,0 +1,257 @@
+
+======================================================
+01 - Introduction
+======================================================
+01- 001 Teaser
+----------------------------------------------------- 
+Intro of these files ... 
+
+ python arp_spoof.py
+ python listener.py
+ python vulnerability_scanner.py 
+------------------------------------
+01- 002 Course Introduction
+-------------------------------------------------------
+python mac_changer.py 
+  - changes the MAC address of a computer 
+  - Algorithm 
+
+python network_scanner.py --target 10.0.2.12/24
+   - scapy 
+   - Dictionaries & lists 
+   - ARP Request , Spoofing, response.
+   - Packet_sniffer 
+
+ - Intercepting & Editiong Data Flows 
+	- Packet sniffer 
+	- DNS Spoofer 
+	- Code Injector
+	- File interceptor
+
+- Write a Malware 
+ 	- Download file 
+	- Execute code
+	- Send Report
+	- Download & Execute
+	- Execute & Report 
+	- Download, Execute & Report
+- Backdoors 
+	- interactive program gives access to system its execution. 
+	- Transfer data using TCP
+	- Serialization 
+Reverse_backdoor
+	- Access file system
+	- Execute system commands
+	- Download files
+	- Upload files
+	- persistence
+Keylogger
+ 	- Program that records keys pressed on the keyboard. 
+	- Threading , OOP
+
+Cross Platform compatibility : 
+Programming Trojans
+
+Website Hacking 
+	- Infomation Gathering. 
+
+Vulnerability Scanner 
+
+-------------------------------------------------
+01-003 Introduction to Python Programming & Ethical Hacking
+-----------------------------------------------------------
+What is Hacking ?
+	- Gaining unathorized access. 
+Hackers ?
+	- Black-hat Hackers
+	- White-Hat Hackers
+	- Grey-Hat Hackers
+
+Why Hacking ?
+	- An Existing Industry.
+	- Lots of Job Opportunities.
+	- Be Able to secure systems from hackers.
+	- Large demand for ethical hackers.
+
+	Uber got Hackers, Others too, 
+ 
+What is Programming ?
+	-The process of writing a program.
+	- Great skill to learn
+	- Lots of job opportunities. 
+	- Allows you to implement you own solutions.
+
+
+What is a Program ?
+	- A Set of instructions to do a certain task or solve a problem.
+	- Facebook app/website.
+  	- Media player
+
+Programming Language?
+	- The language used to implement the solution.
+
+Why Python ?
+	- Simple but powerful
+	- Free & Open Source
+	- Object Oriented
+	- Lots of great libraries for hackers.
+
+-------------------------------------------------
+01-004 Lab Overview
+-------------------------------------------------
+A place to experiment and practice hacking.
+	- Hacking Machine
+	- Other machines to hack
+	- websites to hack 
+	- Networks etc.
+
+Host Machine
+	- Windows / OS X / Linux
+	- Install Virtualization Software ( VMWare / Oracle VB)
+	- Hacking Machine  ( Kali Linux)
+	- Windows  ( )
+	- Metasploitable ()
+
+  - Virtualization 
+	- Install a number of OS inside your current OS
+	- Each Machine has its own resources and functions like a real machine.	
+		- Makes testing easier.
+		- Easier to fix
+		- Isolated from the host OS.
+		- VMWare 
+ 			- Kali Linux
+			- Windows 10
+			- Ubuntu
+			- Metasploitable
+			- debian 
+-----------------------------------------------
+01-005 Initial Preparation
+-----------------------------------------------
+The Lab :  Virtualization
+
+   - Install a number of OS inside your current OS.
+   - Each Machine has its own resources and functions like a real machine.
+  	- Makes testing easier
+	- Easier to fix
+	- Isolated from the host OS.
+
+   - Kali Linux
+	- Linux Distribution based on Debian
+	- Made for Hackers.
+	- Contains most of the tools we need for this course.
+     - This is going to be the hacker machine.
+     - Hacking tools are pre installed and pre configured.
+
+    	- installation options 
+		1. As a VM (Virtual Machine)
+		2. As a Main Machine
+
+	- Download links in the resouces of this lecture. 
+
+
+Enabling Virtualization :  VT-X / AMD-v/ SVM
+	- Feature required to run Virtual Machines. 
+	- Enabled by default an apple computers. 
+	- Might need to be enabled from BIOS on other computers. 
+
+    
+   - Windows > Start Menu > Task Manager > More Details > Performance > Virtualization  (Disable ) if enabled just ignore
+
+  - To enable virtualzation 
+	 > Restart the computer , 
+	 > Enter into BIOS Settings 
+	 > VT-X or AMD-V, SVM, or vanderpool , 
+	> Enable Intel VT-d or AMD IOMMU if the options are available.
+
+   - Check again 
+	Start Menu > Task Manager > More Details >  Performance > Virtualization  Enabled .
+
+
+------------------------------------------------
+01-006 Installing Kali Linux as a VM on Windows
+------------------------------------------------
+  - Extract VMWare Workstation 16 Player 
+  - Extract Kali linux .7z 
+  - Start the VMWare and open Kali Linux VM 
+	  - KaliXXXXX.vmwarevm
+  - RAM , 2GB -> Processor - 2 
+  - Host Machine : 
+  - NAT Network : Virtual Machines think this is an ethernet network. and this the Host Machine as router. 
+
+  - Accelerate 3D graphics  in VMWare
+  - un : root pass: toor 
+  - Scale the display to 200% 
+
+-------------------------------------------------
+01-007 Installing Kali Linux as a VM on Apple Mac OS
+---------------------------------------------------
+01- 008 Installing Kali Linux as a VM on M1 Apple Computers
+---------------------------------------------------
+01- 009 Installing Kali Linux as a VM on Linux
+---------------------------------------------------
+01-010 Basic Overview of Kali Linux
+---------------------------------------------------
+Native between workspace : ctrl+Alt+Up
+			   Ctrl+Alt+Down
+
+---------------------------------------------------
+01-011 The Terminal & Linux Commands
+---------------------------------------------------
+Terminal : 
+   - Penetration test done in terminal 
+   - ssh / cmd prompt access.
+   - pwd 
+   - ls
+   - cd 
+   - man ls 
+   - man cd or man any command 
+   - clear 
+   - ls --help
+   - history or up or down arrow navigate through prev. commands
+   - cd D(tab) autocompletes to cd Downloads
+
+Running progams in Kali 
+   - apt-get update 
+   - apt-get install terminator
+   - apt-get install -y 
+  
+  - terminator application 
+     - RC > Split horizontally 
+ 
+ 
+Linux-Commands-List
+https://www.mediacollege.com/linux/command/linux-command.html
+
+Explain-Shell
+https://explainshell.com/
+
+Pycharm-Download-Link
+https://www.jetbrains.com/pycharm/download/#section=linux
+
+---------------------------------------------------------
+01- 012 Python 2 VS Python 3 & Writing Our First Program
+----------------------------------------------------------
+Python 3 Latest Version 
+   - Both Python 2  & 3 
+   -  Python2 huge no. of progs written 
+
+Some Unix systems come with python2 
+don't worry 
+Slight changes needed to learn b/w Py2, Py3
+
+First Program : 
+  - leafpad ( texteditor )
+  - first.py
+	#!/usr/bin/env python  - if python2 
+  	#!/usr/bin/env python3  - if python3
+	
+    print("Hello world") 
+  - Terminal  > change it to Directory >
+  - $ python hello.py  ( python interpreter ) 
+  - $ python3 hello.py  ( python3 interpreter )
+
+  
+
+
+
+
